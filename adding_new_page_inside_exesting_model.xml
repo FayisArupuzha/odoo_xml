@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="inherit_bom_form_view_id123" model="ir.ui.view">
+            <field name="name">custom.bom.form</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='miscellaneous']" position="after">
+                    <page string="product_variants" name="your_new_page_name">
+                        <field name="mrp_line_connection_ids">
+                            <tree editable="bottom"> 
+                                <field name="product_variants"/>
+                                <field name="qty"/>
+
+                                <!-- <field name="components_ids" widget="many2many_tags"/> -->
+                                <field name="qum"/>
+                                <field name="ratio"/>
+                            </tree>
+                        </field>
+
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
