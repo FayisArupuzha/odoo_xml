@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="custom_button_xpath" model="ir.ui.view">
+            <field name="name">custom.button.xpath</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <data>
+                    <xpath expr="//sheet" position="before">
+                        <header>
+                            <button name="manufacturing" string="Manufacturing" class="oe_highlight" type="object"/>
+
+                        </header>
+                    </xpath>
+                </data>
+            </field>
+        </record>
+    </data>
+</odoo>
