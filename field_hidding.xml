@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="manufacturing_order_hide_fields_inherit2">
+            <field name="name">custom.bom.formss</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='277']" position="before">
+                    <button class="oe_stat_button" name="smart_button" type="object" icon="fa-id-card-0">
+                        <field name="total_count" string="Count" widget="statinfo"></field>
+
+                    </button>
+                    
+                </xpath>
+                <xpath expr="//field[@name='product_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='code']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='product_qty']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='product_uom_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//label[@for='product_qty']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <!-- #for hidding the page -->
+                <xpath expr="//page[@name='by_products']" position="attributes">
+                    <attribute name="groups">base.group_no_one</attribute>
+                </xpath>
+                <xpath expr="//page[@name='miscellaneous']" position="attributes">
+                    <attribute name="groups">base.group_no_one</attribute>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
