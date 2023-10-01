@@ -1,0 +1,12 @@
+<xpath expr="//field[@name='partner_id']" position="after">
+    <!-- Your custom code here -->
+</xpath>
+<xpath expr="//field[@name='partner_id']" position="after">
+    <field name="custom_field" string="Custom Field"/>
+</xpath>
+
+<!-- Add a custom field after 'partner_id' field on 'Sales Orders' page -->
+<xpath expr="//page[@string='Sales Orders']//field[@name='partner_id']" position="after">
+    <field name="custom_field" string="Custom Field"/>
+</xpath>
+
